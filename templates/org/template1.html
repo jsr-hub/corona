@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<!--
+  Overflow by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>PLANT DISEASE DETECTION</title>
+<!-- stylesheets -->
+<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+
+   
+    <!-- Banner -->
+      <section id="banner">
+        <header>
+          <h2>PLANT DISEASE DETECTION</h2>
+        </header>
+        <p>A Convolution Neural Network Model which classifies the plants Diseased or healthy with an accuracy of 97.5%<br />
+        by JSR,BSR,HM </p>
+        <footer>
+          <a href="#first" class="button style2 scrolly">Upload and Classify</a>
+        </footer>
+      </section>
+<section id="first">
+  <div class="new">
+
+<div class="row">
+ 
+  <div class="col-md-7">
+  
+  <h1>let our model help you to find the right leaf..</h1><br>
+	<h2>Upload a LEAVE image</h2>
+    <br>
+
+    <form action="" method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input  class="button style2 " type=submit value=Upload>
+    </form>
+
+    <h2>Results</h2>
+    <br>
+    <table class="table" id="results-table">
+        <tr>
+          <th>Image</th>
+          <th>Prediction</th>
+        </tr>
+        <tr>
+          <th><img width="400px" height="250px" src="im.jpg" />
+</th>
+          <th> {{label}}</th>
+        </tr>
+       
+		
+    </table>
+  </div>
+      </div>
+</div>
+</section>
+</body>
+</html>
+ 

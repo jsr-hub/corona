@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<!--
+  Overflow by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>COVID-19 SIR Model Estimation</title>
+<!-- stylesheets -->
+<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+
+   
+    <!-- Banner -->
+      <section id="banner">
+        <header>
+          <h2>COVID-19 SIR Model Estimation</h2>
+        </header>
+        <p>SIR model is a kind of compartmental model describing the dynamics of infectious disease.<br />
+         </p>
+        <footer>
+          <a href="#first" class="button style2 scrolly">Check the Model</a>
+        </footer>
+      </section>
+<section id="first">
+ 
+
+<div class="row">
+ 
+  <div class="col-md-7">
+  
+  <h1 style="color: wheat">Let our model help you to Simulate with COVID-19 data</h1><br>
+	<h2 style="color: wheat">Enter values</h2>
+    <br>
+
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Country" placeholder="Country" required="required" />
+      <input type="text" name="start-day" placeholder="dd" required="required" />
+		  <input type="text" name="start-month" placeholder="mm" required="required" />
+      <input type="text" name="range to predict" placeholder="predict_range" required="required" />
+      
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <h2 style="color: wheat">Results</h2>
+    <br>
+    <table class="table" id="results-table">
+        <tr>
+          <th style="color: wheat">GRAPH</th>
+          
+        </tr>
+        <tr>
+          <th><img width="600px" height="350px" src="{{ imagesource }}" alt="1.png"/ >
+
+       
+		
+    </table>
+  </div>
+      
+</div>
+</section>
+</body>
+</html>
+ 
