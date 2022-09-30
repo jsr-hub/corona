@@ -3,7 +3,7 @@ Flask==1.1.2
 grpcio==1.28.1
 imutils==0.5.3
 Jinja2==2.11.2
-joblib==0.14.1
+joblib==1.2.0
 Markdown==3.2.1
 MarkupSafe==1.1.1
 matplotlib==3.2.1
